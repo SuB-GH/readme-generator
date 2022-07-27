@@ -1,20 +1,20 @@
 Project Title : project1
-    Project Description : readme generator
+    Project Description : na
 
-    Table of Contents : n/a
+    Table of Contents : na
 
-Installation Instructions : n/a
+Installation Instructions : na
 
-Usage Instructions : n/a
+Usage Instructions : na
 
-Credits : n/a
+Credits : na
 
-License Details : n/a
+License Details : na
 
-Badge Details : n/a
+Badge Details : na
 
-Project Features : n/a
+Project Features : na
 
-Contribution Guidelines : n/a
+Contribution Guidelines : na
 
-Project Author : susan
+Project Author : na
