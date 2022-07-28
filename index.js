@@ -2,6 +2,7 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
 //const generatePage = require('./src/README.md');
+
 const questions = [
     {
         type: 'input',
@@ -11,7 +12,7 @@ const questions = [
             if (titleInput) {
                 return true;
             } else {
-                console.log('What is the title of your project!');
+                console.log('Please provide a project title.');
                 return false;
             }
         }
@@ -25,21 +26,7 @@ const questions = [
             if (titleInput) {
                 return true;
             } else {
-                console.log('Please provide a brief description of your project!');
-                return false;
-            }
-        }
-    },
-
-    {
-        type: 'input',
-        name: 'tableOfContents',
-        message: 'Table of Contents (Optional)',
-        validate: titleInput => {
-            if (titleInput) {
-                return true;
-            } else {
-                console.log('Table of Contents');
+                console.log('Please provide a brief description of your project.');
                 return false;
             }
         }
@@ -48,12 +35,12 @@ const questions = [
     {
         type: 'input',
         name: 'installInst',
-        message: 'Please provide installation instructions. (Required)',
+        message: 'Please provide installation instructions. (Optional)',
         validate: titleInput => {
             if (titleInput) {
                 return true;
             } else {
-                console.log('Please provide installation instructions.!');
+                console.log('Please provide installation instructions.');
                 return false;
             }
         }
@@ -62,68 +49,12 @@ const questions = [
     {
         type: 'input',
         name: 'usageInst',
-        message: 'Please provide usage instructions. (Required)',
+        message: 'Please provide usage instructions. (Optional)',
         validate: titleInput => {
             if (titleInput) {
                 return true;
             } else {
-                console.log('Please provide usage instructions.!');
-                return false;
-            }
-        }
-    },
-
-    {
-        type: 'input',
-        name: 'credits',
-        message: 'Please add any collaborators, attributions, or tutorials. (Required)',
-        validate: titleInput => {
-            if (titleInput) {
-                return true;
-            } else {
-                console.log('Please add any collaborators, attributions, or tutorials!');
-                return false;
-            }
-        }
-    },
-
-    {
-        type: 'input',
-        name: 'license',
-        message: 'Please add any license details. (Required)',
-        validate: titleInput => {
-            if (titleInput) {
-                return true;
-            } else {
-                console.log('Please add any license details!');
-                return false;
-            }
-        }
-    },
-
-    {
-        type: 'input',
-        name: 'badge',
-        message: 'Please add any badge details. (Required)',
-        validate: titleInput => {
-            if (titleInput) {
-                return true;
-            } else {
-                console.log('Please add any badge details!');
-                return false;
-            }
-        }
-    },
-
-    {
-        type: 'input',
-        name: 'features',
-        message: 'Please list any features here. (Required)',
-        validate: titleInput => {
-            if (titleInput) {
-                return true;
-            } else {
-                console.log('Please list any features here!');
+                console.log('Please provide usage instructions.');
                 return false;
             }
         }
@@ -132,12 +63,12 @@ const questions = [
     {
         type: 'input',
         name: 'contrGuidelines',
-        message: 'Please describe how other developers can contribute. (Required)',
+        message: 'Please describe how other developers can contribute to your project. (Optional)',
         validate: titleInput => {
             if (titleInput) {
                 return true;
             } else {
-                console.log('Please describe how other developers can contribute');
+                console.log('Please describe how other developers can contribute to your project.');
                 return false;
             }
         }
@@ -145,17 +76,60 @@ const questions = [
 
     {
         type: 'input',
-        name: 'projectAuthor',
-        message: 'Please provide author details. (Required)',
+        name: 'tests',
+        message: 'Please add any testing. (Optional)',
         validate: titleInput => {
             if (titleInput) {
                 return true;
             } else {
-                console.log('Please provide author details!');
+                console.log('Please add any testing.');
                 return false;
             }
         }
     },
+
+    {
+        type: 'input',
+        name: 'license',
+        message: 'Please choose a license. (Required)',
+        validate: titleInput => {
+            if (titleInput) {
+                return true;
+            } else {
+                console.log('Please choose a license.');
+                return false;
+            }
+        }
+    },
+
+    {
+        type: 'input',
+        name: 'tableOfContents',
+        message: 'Please add a Table of Contents. (Required)',
+        validate: titleInput => {
+            if (titleInput) {
+                return true;
+            } else {
+                console.log('Please add a Table of Contents.');
+                return false;
+            }
+        }
+    },
+
+    {
+        type: 'input',
+        name: 'questions',
+        message: 'Please list any questions here. (Required)',
+        validate: titleInput => {
+            if (titleInput) {
+                return true;
+            } else {
+                console.log('should include github username and email address.');
+                return false;
+            }
+        }
+    },
+
 ];
 
 //test this out
@@ -200,25 +174,23 @@ function init() {
 const generateMarkdown = (projectData) => {
     //console.log("generate markdown");
     return `Project Title : ${projectData.projectTitle}
-    Project Description : ${projectData.projectDescrip}
-
-    Table of Contents : ${projectData.tableOfContents}
+Project Description : ${projectData.projectDescrip}
 
 Installation Instructions : ${projectData.installInst}
 
 Usage Instructions : ${projectData.usageInst}
 
-Credits : ${projectData.credits}
+Contribution Guidelines : ${projectData.contrGuidelines}
+
+Tests : ${projectData.tests}
 
 License Details : ${projectData.license}
 
+Table of Contents : ${projectData.tableOfContents}
+
 Badge Details : ${projectData.badge}
 
-Project Features : ${projectData.features}
-
-Contribution Guidelines : ${projectData.contrGuidelines}
-
-Project Author : ${projectData.projectAuthor}`;
+Project Questions : ${projectData.questions}`;
 
 }
 

@@ -1,20 +1,18 @@
-Project Title : project1
-    Project Description : na
-
-    Table of Contents : na
+Project Title : project 1
+Project Description : readme generator
 
 Installation Instructions : na
 
 Usage Instructions : na
 
-Credits : na
+Contribution Guidelines : na
+
+Tests : na
 
 License Details : na
 
-Badge Details : na
+Table of Contents : na
 
-Project Features : na
+Badge Details : undefined
 
-Contribution Guidelines : na
-
-Project Author : na
+Project Questions : na
