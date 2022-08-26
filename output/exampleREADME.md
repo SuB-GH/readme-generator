@@ -1,18 +1,18 @@
-Project Title : project 1
-Project Description : readme generator
+Project Title : my project
+Project Description : no
 
-Installation Instructions : na
+Installation Instructions : later
 
-Usage Instructions : na
+Usage Instructions : ok
 
-Contribution Guidelines : na
+Contribution Guidelines : will do
 
-Tests : na
+Tests : test
 
-License Details : na
+License Details : license#
 
-Table of Contents : na
+Table of Contents : table of contente
 
 Badge Details : undefined
 
-Project Questions : na
+Project Questions : ok
