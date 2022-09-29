@@ -3,6 +3,7 @@ const fs = require('fs');
 const inquirer = require('inquirer');
 //const generatePage = require('./src/README.md');
 
+
 const questions = [
     {
         type: 'input',
@@ -31,6 +32,7 @@ const questions = [
             }
         }
     },
+
 
     {
         type: 'input',
@@ -89,11 +91,12 @@ const questions = [
     },
 
     {
-        type: 'input',
+        type: 'list',
         name: 'license',
         message: 'Please choose a license. (Required)',
-        validate: titleInput => {
-            if (titleInput) {
+        choices: ['Apache_2.0', 'Eclipse Public License 1.0', 'Mozilla Public License 2.0', 'MIT License'],
+        validate: licenseInput => {
+            if (licenseInput) {
                 return true;
             } else {
                 console.log('Please choose a license.');
@@ -104,13 +107,13 @@ const questions = [
 
     {
         type: 'input',
-        name: 'tableOfContents',
-        message: 'Please add a Table of Contents. (Required)',
-        validate: titleInput => {
-            if (titleInput) {
+        name: 'github',
+        message: 'Enter your GitHub Username (Required)',
+        validate: githubInput => {
+            if (githubInput) {
                 return true;
             } else {
-                console.log('Please add a Table of Contents.');
+                console.log('Please enter your GitHub username!');
                 return false;
             }
         }
@@ -137,23 +140,8 @@ const promptUser = () => {
     return inquirer.prompt(questions);
 }
 
-// TODO: Create an array of questions for user input
-// What is the title of your project?
-// Please provide a description of your project.
-// What was your motivation for creating the project?
-// What problem does it solve?
-// What did you learn?
-// What steps are required to install your project?
-// Provide instructions on how to use the project.
-// List collaborators, if any.
-// Any thirt-party assets requiring attribution?
-// License details?
-// Add badges
-
-
-
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) { }
+//function writeToFile(fileName, data) { }
 
 // TODO: Create a function to initialize app
 function init() {
@@ -173,36 +161,37 @@ function init() {
 
 const generateMarkdown = (projectData) => {
     //console.log("generate markdown");
-    return `Project Title : ${projectData.projectTitle}
-Project Description : ${projectData.projectDescrip}
+    return `# ${projectData.projectTitle}
 
-Installation Instructions : ${projectData.installInst}
+## Table of Contents : 
+${projectData.tableOfContents}
 
-Usage Instructions : ${projectData.usageInst}
+## Project Description : 
+${projectData.projectDescrip}
 
-Contribution Guidelines : ${projectData.contrGuidelines}
+## Installation Instructions : 
+${projectData.installInst}
 
-Tests : ${projectData.tests}
+## Usage Instructions : 
+${projectData.usageInst}
 
-License Details : ${projectData.license}
+## Contribution Guidelines : 
+${projectData.contrGuidelines}
 
-Table of Contents : ${projectData.tableOfContents}
+## Tests : 
+${projectData.tests}
 
-Badge Details : ${projectData.badge}
+## License Details : 
+${projectData.license}
 
-Project Questions : ${projectData.questions}`;
+## Badge Details : 
+${projectData.badge}
+[![License](https://img.shields.io/badge/License-${projectData.license}-blue.svg)](https://opensource.org/licenses/${projectData.license})
+
+## Project Questions : 
+${projectData.questions}`;
 
 }
 
 // Function call to initialize app
 init();
-
-// const generatePage = () => 'Name: Jane, Github: janehub';
-// console.log(generatePage());
-
-// const printProjectData = (projectDataArr) => {
-//     console.log(projectDataArr);
-// };
-
-// printProjectData(projectDataArgs);
-

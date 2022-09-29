@@ -1,18 +1,29 @@
-Project Title : my project
-Project Description : no
+# Professional Readme Generator
 
-Installation Instructions : later
+## Table of Contents : 
+undefined
 
-Usage Instructions : ok
+## Project Description : 
+This application uses the command line to generate a quality README project for your project
 
-Contribution Guidelines : will do
+## Installation Instructions : 
+Inquirer package is required
 
-Tests : test
+## Usage Instructions : 
+Upon successfull installation of Inquirer.js, use  the command "node index.js to start the command -line prompts
 
-License Details : license#
+## Contribution Guidelines : 
+n/a
 
-Table of Contents : table of contente
+## Tests : 
+n/a
 
-Badge Details : undefined
+## License Details : 
+Apache_2.0
 
-Project Questions : ok
+## Badge Details : 
+undefined
+[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache_2.0)
+
+## Project Questions : 
+n/a

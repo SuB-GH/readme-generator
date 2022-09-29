@@ -9,5 +9,5 @@ This command-line application allows the user to dynamically create a README fil
 This app uses:
     - Inquirer package
 
-## &copy Created by:  Susan Brown
+## &copy; Created by:  Susan Brown
 
