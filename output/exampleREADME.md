@@ -6,7 +6,7 @@
 - [Installation](#installation)
 - [Usage](#usage)
 - [Credits](#credits)
-- [License Details](#license)
+- [License Details](##-License-Details)
 
 ## Project Description : 
 ok
@@ -23,11 +23,10 @@ ok
 ## Tests : 
 ok
 
-## License Details : (#license)
+## License Details :
 Apache_2.0
 
 ## Badge Details : 
-undefined
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache_2.0)
 
 ## Project Questions : 

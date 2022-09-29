@@ -169,7 +169,7 @@ ${projectData.tableOfContents}
 ## Project Description : 
 ${projectData.projectDescrip}
 
-## [Installation Instructions](#Installation Instructions): 
+## Installation Instructions : 
 ${projectData.installInst}
 
 ## Usage Instructions : 
