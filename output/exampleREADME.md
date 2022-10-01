@@ -1,33 +1,34 @@
-# Title
+# project
+  
+[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache_2.0)
+
 
 ## Table of Contents : 
-- [Project Description](#description)
-- [Installation](#installation)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Credits](#credits)
-- [License Details](##-License-Details)
+- [Description](#project-description)
+- [Installation Instructions](#installation-instructions)
+- [Usage Instructions](#usage-instructions)
+- [Contributions](#contribution-guidelines)
+- [Testing](#tests)
+- [License Details](#license-details)
+- [Questions](#project-questions)
 
 ## Project Description : 
-ok
-
-## Installation Instructions : 
 later
 
+## Installation Instructions : 
+ok
+
 ## Usage Instructions : 
-no
+ok
 
 ## Contribution Guidelines : 
 ok
 
 ## Tests : 
-ok
+n/a
 
-## License Details :
+## License Details : 
 Apache_2.0
 
-## Badge Details : 
-[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache_2.0)
-
 ## Project Questions : 
-no
+how do I do this?

@@ -1,8 +1,6 @@
-// TODO: Include packages needed for this application
 const fs = require('fs');
 const inquirer = require('inquirer');
-//const generatePage = require('./src/README.md');
-
+const generateMarkdown = require('./utils/generateMarkdown')
 
 const questions = [
     {
@@ -32,7 +30,6 @@ const questions = [
             }
         }
     },
-
 
     {
         type: 'input',
@@ -66,28 +63,28 @@ const questions = [
         type: 'input',
         name: 'contrGuidelines',
         message: 'Please describe how other developers can contribute to your project. (Optional)',
-        validate: titleInput => {
-            if (titleInput) {
-                return true;
-            } else {
-                console.log('Please describe how other developers can contribute to your project.');
-                return false;
-            }
-        }
+        // validate: titleInput => {
+        //     if (titleInput) {
+        //         return true;
+        //     } else {
+        //         console.log('Please describe how other developers can contribute to your project.');
+        //         return false;
+        //     }
+        // }
     },
 
     {
         type: 'input',
         name: 'tests',
         message: 'Please add any testing. (Optional)',
-        validate: titleInput => {
-            if (titleInput) {
-                return true;
-            } else {
-                console.log('Please add any testing.');
-                return false;
-            }
-        }
+        // validate: titleInput => {
+        //     if (titleInput) {
+        //         return true;
+        //     } else {
+        //         console.log('Please add any testing.');
+        //         return false;
+        //     }
+        // }
     },
 
     {
@@ -95,14 +92,14 @@ const questions = [
         name: 'license',
         message: 'Please choose a license. (Required)',
         choices: ['Apache_2.0', 'Eclipse Public License 1.0', 'Mozilla Public License 2.0', 'MIT License'],
-        validate: licenseInput => {
-            if (licenseInput) {
-                return true;
-            } else {
-                console.log('Please choose a license.');
-                return false;
-            }
-        }
+        // validate: licenseInput => {
+        //     if (licenseInput) {
+        //         return true;
+        //     } else {
+        //         console.log('Please choose a license.');
+        //         return false;
+        //     }
+        // }
     },
 
     {
@@ -123,14 +120,14 @@ const questions = [
         type: 'input',
         name: 'questions',
         message: 'Please list any questions here. (Required)',
-        validate: titleInput => {
-            if (titleInput) {
-                return true;
-            } else {
-                console.log('should include github username and email address.');
-                return false;
-            }
-        }
+        // validate: titleInput => {
+        //     if (titleInput) {
+        //         return true;
+        //     } else {
+        //         console.log('should include github username and email address.');
+        //         return false;
+        //     }
+        // }
     },
 
 ];
@@ -139,9 +136,6 @@ const questions = [
 const promptUser = () => {
     return inquirer.prompt(questions);
 }
-
-// TODO: Create a function to write README file
-//function writeToFile(fileName, data) { }
 
 // TODO: Create a function to initialize app
 function init() {
@@ -158,40 +152,5 @@ function init() {
             });
         });
 }
-
-const generateMarkdown = (projectData) => {
-    //console.log("generate markdown");
-    return `# ${projectData.projectTitle}
-
-## Table of Contents : 
-${projectData.tableOfContents}
-
-## Project Description : 
-${projectData.projectDescrip}
-
-## Installation Instructions : 
-${projectData.installInst}
-
-## Usage Instructions : 
-${projectData.usageInst}
-
-## Contribution Guidelines : 
-${projectData.contrGuidelines}
-
-## Tests : 
-${projectData.tests}
-
-## License Details : 
-${projectData.license}
-
-## Badge Details : 
-${projectData.badge}
-[![License](https://img.shields.io/badge/License-${projectData.license}-blue.svg)](https://opensource.org/licenses/${projectData.license})
-
-## Project Questions : 
-${projectData.questions}`;
-
-}
-
 // Function call to initialize app
 init();
