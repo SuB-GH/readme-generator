@@ -10,6 +10,7 @@ Inquirer.js installation is required
 Upon successful installation of Inquirer.js, use the command "node index.js" in the terminal to start the command-line prompts.
 
 ## Link to walkthrough video:
+https://drive.google.com/file/d/1qEdXDuRleNHTuM16Swn_53iihoU_bWL9/view
 
 ### &copy; Created by:  
 Susan Brown
