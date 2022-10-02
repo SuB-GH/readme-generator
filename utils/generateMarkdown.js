@@ -6,7 +6,6 @@ const generateMarkdown = (projectData) => {
   
 [![License](https://img.shields.io/badge/License-${projectData.license}-blue.svg)](https://opensource.org/licenses/${projectData.license})
 
-
 ## Table of Contents : 
 - [Description](#project-description)
 - [Installation Instructions](#installation-instructions)
@@ -14,7 +13,7 @@ const generateMarkdown = (projectData) => {
 - [Contributions](#contribution-guidelines)
 - [Testing](#tests)
 - [License Details](#license-details)
-- [Questions](#project-questions)
+- [Questions](#questions)
 
 ## Project Description : 
 ${projectData.projectDescrip}
@@ -34,14 +33,18 @@ ${projectData.tests}
 ## License Details : 
 ${projectData.license}
 
-## Project Questions : 
-${projectData.questions}`;
+## Questions?
+[Click here to view my github page](https://github.com/${projectData.github})
+\n or contact me at:  ${projectData.email}`;
 }
 
-module.exports = generateMarkdown;
+module.exports = generateMarkdown; //export this to the index.js file
 
 
 //removed these:
+
+//## Github Details : 
+
 // ## Badge Details : 
 // ${projectData.badge}
 // [![License](https://img.shields.io/badge/License-${projectData.license}-blue.svg)](https://opensource.org/licenses/${projectData.license})

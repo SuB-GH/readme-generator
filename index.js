@@ -35,20 +35,20 @@ const questions = [
         type: 'input',
         name: 'installInst',
         message: 'Please provide installation instructions. (Optional)',
-        validate: titleInput => {
-            if (titleInput) {
-                return true;
-            } else {
-                console.log('Please provide installation instructions.');
-                return false;
-            }
-        }
+        // validate: titleInput => {
+        //     if (titleInput) {
+        //         return true;
+        //     } else {
+        //         console.log('Please provide installation instructions.');
+        //         return false;
+        //     }
+        // }
     },
 
     {
         type: 'input',
         name: 'usageInst',
-        message: 'Please provide usage instructions. (Optional)',
+        message: 'Please provide usage instructions. (Required)',
         validate: titleInput => {
             if (titleInput) {
                 return true;
@@ -90,8 +90,8 @@ const questions = [
     {
         type: 'list',
         name: 'license',
-        message: 'Please choose a license. (Required)',
-        choices: ['Apache_2.0', 'Eclipse Public License 1.0', 'Mozilla Public License 2.0', 'MIT License'],
+        message: 'Please choose a license. (Optional)',
+        choices: ['Eclipse Public License 1.0', 'Apache_2.0', 'Mozilla Public License 2.0', 'MIT License'],
         // validate: licenseInput => {
         //     if (licenseInput) {
         //         return true;
@@ -110,7 +110,7 @@ const questions = [
             if (githubInput) {
                 return true;
             } else {
-                console.log('Please enter your GitHub username!');
+                console.log('Please enter your GitHub username');
                 return false;
             }
         }
@@ -118,17 +118,31 @@ const questions = [
 
     {
         type: 'input',
-        name: 'questions',
-        message: 'Please list any questions here. (Required)',
-        // validate: titleInput => {
-        //     if (titleInput) {
-        //         return true;
-        //     } else {
-        //         console.log('should include github username and email address.');
-        //         return false;
-        //     }
-        // }
+        name: 'email',
+        message: 'Enter your email address (Required)',
+        validate: emailInput => {
+            if (emailInput) {
+                return true;
+            } else {
+                console.log('Please enter your email address');
+                return false;
+            }
+        }
     },
+
+    // {
+    //     type: 'input',
+    //     name: 'questions',
+    //     message: 'Please list any questions here. (Optional)',
+    //     validate: titleInput => {
+    //         if (titleInput) {
+    //             return true;
+    //         } else {
+    //             console.log('should include github username and email address.');
+    //             return false;
+    //         }
+    //     }
+    // },
 
 ];
 
